@@ -1,0 +1,11 @@
+{
+  "extends": "fastify-tsconfig",
+  "compilerOptions": {
+    "outDir": "dist",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "useUnknownInCatchVariables": false
+  },
+  "include": ["src/**/*.ts"]
+  // "exclude": ["pg"]
+}

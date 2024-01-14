@@ -1,0 +1,15 @@
+version: '3.9'
+
+services:
+  postgres_db:
+    image: postgres:latest
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: targetDB
+      POSTGRES_USER: targetUser
+      POSTGRES_PASSWORD: targetPass
+      PGDATA: /var/lib/postgresql/data/target/
+    volumes:
+      - ./pg/data:/var/lib/postgresql/data/target:z
+    ports:
+      - 5432:5432
